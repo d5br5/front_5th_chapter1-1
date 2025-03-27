@@ -57,7 +57,7 @@
   `,onMount:()=>{const n=document.getElementById(e.profileForm.formId);if(!n)return;Object.values(e.profileForm.field).forEach(r=>{var o;const l=n.querySelector(`#${r}`);l.value=((o=a.loggedInUser)==null?void 0:o[r])??""}),n.addEventListener("submit",r=>{r.preventDefault();const l=new FormData(n),o=Object.fromEntries(l),s=a.loggedInUser;if(o.username!==s.username||o.email!==s.email||o.bio!==s.bio){const c={...a.loggedInUser,...o},b=a.users.findIndex(v=>v.username===a.loggedInUser.username);a.users.splice(b,1,c),localStorage.setItem(e.lsKey.users,JSON.stringify(a.users)),a.loggedInUser=c,localStorage.setItem(e.lsKey.user,JSON.stringify(c)),alert("profile 변경 완료")}})}},f={template:()=>`
     <form id="${e.loginForm.formId}">
       <div class="mb-4">
-        <input type="text" name="${e.loginForm.field.username}" id="${e.loginForm.field.username}" placeholder="사용자 이름" class="w-full p-2 border rounded">
+        <input type="text" name="${e.loginForm.field.username}"  id="${e.loginForm.field.username}" placeholder="사용자 이름" class="w-full p-2 border rounded">
       </div>
       <div class="mb-6">
         <input type="password" name="${e.loginForm.field.password}" id="${e.loginForm.field.password}" placeholder="비밀번호" class="w-full p-2 border rounded">

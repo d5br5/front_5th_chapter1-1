@@ -1,1 +1,0 @@
-import{B as r}from"./router--RzNZ4lI.js";class a extends r{constructor(){super()}addEventListener(){window.addEventListener("popstate",()=>this.checkSafetyAndRender())}getCurrentPath(){return window.location.pathname}replaceState(t){history.replaceState({},"",t)}pushState(t){history.pushState({},"",t)}}const e=new a;window.router=e;e.start();
