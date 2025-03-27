@@ -1,1 +1,0 @@
-import{B as a}from"./router-CsYSP7dC.js";class n extends a{constructor(){super()}addEventListener(){window.addEventListener("hashchange",()=>this.checkSafetyAndRender())}getCurrentPath(){return(window.location.hash||"#/").replace(/^#/,"")||"/"}replaceState(e){window.location.hash=`#${e}`}pushState(e){window.location.hash=`#${e}`}}const t=new n;window.router=t;t.start();
